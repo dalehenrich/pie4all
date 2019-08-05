@@ -1,0 +1,11 @@
+language: bash
+sudo: true
+
+env:
+  - ST_LAUNCHER_HOME="$TRAVIS_BUILD_DIR/home" SHUNIT_COLOR='always' TRAVIS_SUDO_COMMAND="sudo"
+
+before_script:
+    - bin/install.sh 
+
+script:
+- bash travis_tests/st_launcher_tests.sh
